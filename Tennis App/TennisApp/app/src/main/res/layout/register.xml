@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+    <TextView
+        android:id="@+id/TennisAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tennis App"
+        android:textSize="24sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="Password must be at least 10 characters long and contain at least 1 special character (!, @, #, $, %, *)"
+        android:textColor = "#ee0909"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TennisAppBanner"
+        app:layout_constraintBottom_toTopOf="@id/emailTV" />
+
+
+    <TextView
+        android:id="@+id/usernameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toBottomOf="@+id/emailTV"
+/>
+
+    <TextView
+        android:id="@+id/emailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/submitButton"/>
+
+    <TextView
+        android:id="@+id/passwordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toBottomOf= "@id/usernameTV" />
+
+    <TextView
+        android:id="@+id/confirmpasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toBottomOf= "@id/passwordTV" />
+
+    <TextView
+        android:id="@+id/answerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toBottomOf= "@id/securityquestionTV" />
+
+    <TextView
+        android:id="@+id/securityquestionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Security Question:"
+        android:textSize="14sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@id/TennisAppBanner"
+        app:layout_constraintTop_toBottomOf= "@id/confirmpasswordTV" />
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Enter e-mail"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/emailTV"
+        app:layout_constraintBottom_toBottomOf="@id/emailTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usernameTV" />
+
+    <EditText
+        android:id="@+id/usernameET"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter desired username"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/usernameTV"
+        app:layout_constraintBottom_toBottomOf="@id/usernameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usernameTV" />
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passwordTV"
+        app:layout_constraintTop_toBottomOf="@id/usernameET" />
+
+    <EditText
+        android:id="@+id/confirmpasswordET"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Re-enter Password"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/confirmpasswordTV"
+        app:layout_constraintBottom_toBottomOf="@id/confirmpasswordTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usernameTV" />
+
+    <Spinner
+        android:id="@+id/securityquestionSpinner"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/securityquestionTV"
+        app:layout_constraintBottom_toBottomOf="@id/securityquestionTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usernameTV" />
+
+    <EditText
+        android:id="@+id/answerET"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:hint="Answer to security question"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/answerTV"
+        app:layout_constraintBottom_toBottomOf="@id/answerTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usernameTV" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
